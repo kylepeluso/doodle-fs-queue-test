@@ -5,11 +5,11 @@ import FreestarAdSlot from '@freestar/pubfig-adslot-react-component'
 import './demo.css'
 
 const Ad2 = () => {
-  const placementName = 'GardeningKnowHow_300x600_300x250_320x50_Right_2_'
+  const placementName = 'myCustomAdPlacement'
   const publisher = 'gardeningknowhow'
   const targeting = { kyle: 'KPP' }
   const slotSize = [[300,250], [728,90]]
-  const adUnitPath = '/15184186/test_dashboard'
+  const adUnitPath = '/15184186/123helpme_incontent_1'
 
 
   return (
