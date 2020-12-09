@@ -7,7 +7,7 @@ import './demo.css'
 const Ad2 = () => {
   const placementName = 'myCustomAdPlacement'
   const publisher = 'gardeningknowhow'
-  const targeting = { kyle: 'KPP' }
+  const targeting = { kyle: 'KPP', test: 'testads' }
   const slotSize = [[300,250], [728,90]]
   const adUnitPath = '/15184186/123helpme_incontent_1'
 

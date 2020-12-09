@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@freestar/pubfig-adslot-react-component": "^1.7.0-beta.8",
+    "@freestar/pubfig-adslot-react-component": "^1.7.0-beta.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "0.9.5"
