@@ -5,9 +5,9 @@ import FreestarAdSlot from '@freestar/pubfig-adslot-react-component'
 import './demo.css'
 
 const Ad1 = () => {
-  const placementName = 'GardeningKnowHow_300x600_300x250_320x50_Right_1_'
-  const publisher = 'gardeningknowhow'
-  const targeting = { test: 'testads' }
+  const placementName = 'headphonereview_300x250_320x50_1'
+  const publisher = 'headphonereview'
+  const targeting = { test: 'testads', site : 'fanatics', section:'NFL' }
 
   return (
     <div>
@@ -16,6 +16,7 @@ const Ad1 = () => {
         placementName={placementName}
         targeting={targeting}
         classList={['m-30', 'p-15', 'b-thin-red']}
+        placementMappingLocation='https://api.jsonbin.io/b/6000f76fe31fbc3bdef3d725/1'
       />
     </div>
   )
