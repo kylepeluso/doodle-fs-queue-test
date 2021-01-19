@@ -1,15 +1,13 @@
 import React from 'react'
 
-import Ad1 from './ad1'
-import Ad2 from './ad2'
+import AdFooter from './AdFooter'
 
 import './app.css'
 
 const App = () => {
   return (
     <div className='app'>
-      <Ad1 />
-      <Ad2 />
+      <AdFooter />
     </div>
   )
 }

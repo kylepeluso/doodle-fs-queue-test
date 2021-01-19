@@ -1,3 +1,4 @@
 # To run
 
-1. run `npm start`
+1. install `npm install`
+2. run `npm start`
