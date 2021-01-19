@@ -9,6 +9,7 @@ const AdCheckout = (props) => {
 
   return (
     <div>
+      <div className="i">{placementName}</div>
       <FreestarAdSlot
         publisher={publisher}
         placementName={placementName}

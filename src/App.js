@@ -21,11 +21,12 @@ import TlpPos4 from './TlpPos4'
 import './app.css'
 
 const App = () => {
-  const siteValue = "508032"
+  const siteValue = "510005"
   const leagueValue = "nhl"
 
   return (
     <div className='app'>
+      <h3>Site: {siteValue} - League: {leagueValue}</h3>
       <AdFooter siteValue={siteValue} leagueValue={leagueValue} />
       <AdCheckout siteValue={siteValue} leagueValue={leagueValue} />
       <DlpPos1 siteValue={siteValue} leagueValue={leagueValue} />
