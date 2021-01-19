@@ -2,8 +2,8 @@ import React from 'react'
 
 import FreestarAdSlot from '@freestar/pubfig-adslot-react-component'
 
-const AdFooter = (props) => {
-  const placementName = 'fanatics_all_footer'
+const AdCheckout = (props) => {
+  const placementName = 'fanatics_cp_728X90'
   const publisher = 'fanatics-com'
   const targeting = { test: 'testads', siteId : props.siteValue, league: props.leagueValue }
 
@@ -22,4 +22,4 @@ const AdFooter = (props) => {
   )
 }
 
-export default AdFooter
+export default AdCheckout
