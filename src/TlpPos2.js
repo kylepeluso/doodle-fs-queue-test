@@ -2,8 +2,8 @@ import React from 'react'
 
 import FreestarAdSlot from '@freestar/pubfig-adslot-react-component'
 
-const AdCheckout = (props) => {
-  const placementName = 'fanatics_cp_728X90'
+const TlpPos2 = (props) => {
+  const placementName = 'fanatics_tlp_side_nav_pos2'
   const publisher = 'fanatics-com'
   const targeting = { test: 'testads', siteId : props.siteValue, league: props.leagueValue }
 
@@ -22,4 +22,4 @@ const AdCheckout = (props) => {
   )
 }
 
-export default AdCheckout
+export default TlpPos2

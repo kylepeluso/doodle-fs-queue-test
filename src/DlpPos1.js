@@ -13,7 +13,7 @@ const DlpPos1 = (props) => {
         publisher={publisher}
         placementName={placementName}
         targeting={targeting}
-        keyValueConfigMappingURL='https://a.pub.network/fanatics-com/placement-mapping-2.json'
+        keyValueConfigMappingURL='https://a.pub.network/fanatics-com/placement-mapping.json'
         onNewAdSlotsHook={(placementName) => console.log('creating ad', placementName)}
         onDeleteAdSlotsHook={(placementName) => console.log('destroying ad', placementName)}
         onAdRefreshHook={(placementName) => console.log('refreshing ad', placementName)}
