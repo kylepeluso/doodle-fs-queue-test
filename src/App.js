@@ -1,49 +1,39 @@
 import React from 'react'
 
-import AdFooter from './AdFooter'
-import AdCheckout from './AdCheckout'
-import DlpPos1 from './DlpPos1'
-import DlpPos2 from './DlpPos2'
-import DlpPos3 from './DlpPos3'
-import DlpPos4 from './DlpPos4'
-import DlpTop from './DlpTop'
-import Llp from './Llp'
-import PdpPos1 from './PdpPos1'
-import PdpPos2 from './PdpPos2'
-import PdpPos3 from './PdpPos3'
-import TlpGridC1 from './TlpGridC1'
-import TlpGridC2 from './TlpGridC2'
-import TlpPos1 from './TlpPos1'
-import TlpPos2 from './TlpPos2'
-import TlpPos3 from './TlpPos3'
-import TlpPos4 from './TlpPos4'
+import FreestarAdSlot from '@freestar/pubfig-adslot-react-component'
+import FsAd from './FsAd'
+
 
 import './app.css'
 
 const App = () => {
   const siteValue = "510005"
   const leagueValue = "nhl"
+  
+  FreestarAdSlot.setPageTargeting('siteId', siteValue)
+  FreestarAdSlot.setPageTargeting('league', leagueValue)
+  FreestarAdSlot.setPageTargeting('test', 'testads')
 
   return (
     <div className='app'>
       <h3>Site: {siteValue} - League: {leagueValue}</h3>
-      <AdFooter siteValue={siteValue} leagueValue={leagueValue} />
-      <AdCheckout siteValue={siteValue} leagueValue={leagueValue} />
-      <DlpPos1 siteValue={siteValue} leagueValue={leagueValue} />
-      <DlpPos2 siteValue={siteValue} leagueValue={leagueValue} />
-      <DlpPos3 siteValue={siteValue} leagueValue={leagueValue} />
-      <DlpPos4 siteValue={siteValue} leagueValue={leagueValue} />
-      <DlpTop siteValue={siteValue} leagueValue={leagueValue} />
-      <Llp siteValue={siteValue} leagueValue={leagueValue} />
-      <PdpPos1 siteValue={siteValue} leagueValue={leagueValue} />
-      <PdpPos2 siteValue={siteValue} leagueValue={leagueValue} />
-      <PdpPos3 siteValue={siteValue} leagueValue={leagueValue} />
-      <TlpGridC1 siteValue={siteValue} leagueValue={leagueValue} />
-      <TlpGridC2 siteValue={siteValue} leagueValue={leagueValue} />
-      <TlpPos1 siteValue={siteValue} leagueValue={leagueValue} />
-      <TlpPos2 siteValue={siteValue} leagueValue={leagueValue} />
-      <TlpPos3 siteValue={siteValue} leagueValue={leagueValue} />
-      <TlpPos4 siteValue={siteValue} leagueValue={leagueValue} />
+      <FsAd placementName='fanatics_all_footer' placementTargeting={{'kyle': 'rules'}} />
+      <FsAd placementName='fanatics_llp_1600x150' placementTargeting={{}} />
+      <FsAd placementName='fanatics_tlp_side_nav_pos1' placementTargeting={{}} />
+      <FsAd placementName='fanatics_tlp_side_nav_pos2' placementTargeting={{}} />
+      <FsAd placementName='fanatics_tlp_side_nav_pos3' placementTargeting={{}} />
+      <FsAd placementName='fanatics_tlp_side_nav_pos4' placementTargeting={{}} />
+      <FsAd placementName='fanatics_tlp_grid_c1_675x365' placementTargeting={{}} />
+      <FsAd placementName='fanatics_tlp_grid_c2_675x365' placementTargeting={{}} />
+      <FsAd placementName='fanatics_dlp_top' placementTargeting={{}} />
+      <FsAd placementName='fanatics_dlp_side_nav_pos1' placementTargeting={{}} />
+      <FsAd placementName='fanatics_dlp_side_nav_pos2' placementTargeting={{}} />
+      <FsAd placementName='fanatics_dlp_side_nav_pos3' placementTargeting={{}} />
+      <FsAd placementName='fanatics_dlp_side_nav_pos4' placementTargeting={{}} />
+      <FsAd placementName='fanatics_pdp_pos1' placementTargeting={{}} />
+      <FsAd placementName='fanatics_pdp_pos2' placementTargeting={{}} />
+      <FsAd placementName='fanatics_pdp_pos3' placementTargeting={{}} />
+      <FsAd placementName='fanatics_cp_728X90' placementTargeting={{}} />
     </div>
   )
 }

@@ -2,10 +2,10 @@ import React from 'react'
 
 import FreestarAdSlot from '@freestar/pubfig-adslot-react-component'
 
-const DlpPos1 = (props) => {
-  const placementName = 'fanatics_dlp_side_nav_pos1'
+const FsAd = (props) => {
   const publisher = 'fanatics-com'
-  const targeting = { test: 'testads', siteId : props.siteValue, league: props.leagueValue }
+  const placementName = props.placementName
+  const placementTargeting = props.placementTargeting;
 
   return (
     <div>
@@ -13,7 +13,7 @@ const DlpPos1 = (props) => {
       <FreestarAdSlot
         publisher={publisher}
         placementName={placementName}
-        targeting={targeting}
+        targeting={placementTargeting}
         keyValueConfigMappingURL='https://a.pub.network/fanatics-com/placement-mapping.json'
         onNewAdSlotsHook={(placementName) => console.log('creating ad', placementName)}
         onDeleteAdSlotsHook={(placementName) => console.log('destroying ad', placementName)}
@@ -23,4 +23,4 @@ const DlpPos1 = (props) => {
   )
 }
 
-export default DlpPos1
+export default FsAd
