@@ -8,16 +8,16 @@ import './app.css'
 
 const App = () => {
 
-  const publisher = 'demoads-com'
+  const publisher = 'freestar-com'
 
   FreestarAdSlot.setPageTargeting('test', 'testads')
 
   return (
     <div className='app'>
-      <FsAd publisher={publisher} placementName='demoads_300x250' placementTargeting={{'key': 'value'}} />
-      <FsAd publisher={publisher} placementName='demoads_728x90_320x50' placementTargeting={{}} />
-      <FsAd publisher={publisher} placementName='demoads_160x600_1' placementTargeting={{}} />
-      <FsAd publisher={publisher} placementName='demoads_160x600_2' placementTargeting={{}} />
+      <FsAd publisher={publisher} placementName='freestar_display_ad_1' placementTargeting={{'key': 'value'}} />
+      <FsAd publisher={publisher} placementName='freestar_display_ad_2' placementTargeting={{}} />
+      <FsAd publisher={publisher} placementName='freestar_leaderboard_cls' placementTargeting={{}} />
+      <FsAd publisher={publisher} placementName='freestar_superflex' placementTargeting={{}} />
     </div>
   )
 }
