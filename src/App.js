@@ -1,23 +1,29 @@
 import React from 'react'
 
-import FreestarAdSlot from '@freestar/pubfig-adslot-react-component'
-import FsAd from './FsAd'
-
-
 import './app.css'
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./views/home";
+import Reuters from "./views/reuters";
 const App = () => {
 
-  const publisher = 'freestar-com'
-
-  FreestarAdSlot.setPageTargeting('test', 'testads')
-
   return (
+
     <div className='app'>
-      <FsAd publisher={publisher} placementName='freestar_display_ad_1' placementTargeting={{'key': 'value'}} />
-      <FsAd publisher={publisher} placementName='freestar_display_ad_2' placementTargeting={{}} />
-      <FsAd publisher={publisher} placementName='freestar_leaderboard_cls' placementTargeting={{}} />
-      <FsAd publisher={publisher} placementName='freestar_superflex' placementTargeting={{}} />
+        <Router>
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/reuters">Reuters</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <Route path="/" exact component={Home} />
+            <Route path="/reuters" component={Reuters} />
+        </main>
+
+        </Router>
+
     </div>
   )
 }
