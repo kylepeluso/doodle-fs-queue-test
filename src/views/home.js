@@ -1,20 +1,33 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from "react";
 import FsAd from "../FsAd";
-import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 
-const publisher = 'freestar-com'
-
-FreestarAdSlot.setPageTargeting('test', 'testads')
+const channel = "motortrend.primedia.com/homepage";
 
 const Home = (props) => {
-    return (
-        <Fragment>
-            <FsAd publisher={publisher} placementName='freestar_display_ad_1' placementTargeting={{'key': 'value'}} />
-            <FsAd publisher={publisher} placementName='freestar_display_ad_2' placementTargeting={{}} />
-            <FsAd publisher={publisher} placementName='freestar_leaderboard_cls' placementTargeting={{}} />
-            <FsAd publisher={publisher} placementName='freestar_superflex' placementTargeting={{}} />
-        </Fragment>
-    )
-}
+  return (
+    <Fragment>
+      <FsAd
+        placementName="MT_HP_300x250_top"
+        placementTargeting={{ key: "value" }}
+        channel={channel}
+      />
+      <FsAd
+        placementName="MT_HP_300x250_middle"
+        placementTargeting={{}}
+        channel={channel}
+      />
+      <FsAd
+        placementName="MT_HP_300x600_300x250_middle"
+        placementTargeting={{}}
+        channel={channel}
+      />
+      <FsAd
+        placementName="MT_HP_300x250_bottom"
+        placementTargeting={{}}
+        channel={channel}
+      />
+    </Fragment>
+  );
+};
 
-export default Home
+export default Home;
