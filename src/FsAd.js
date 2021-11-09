@@ -6,9 +6,12 @@ const FsAd = (props) => {
   const publisher = "motortrend-com";
   const placementName = props.placementName;
   const channel = props.channel;
+  const slotId = props.slotId ? props.slotId : undefined;
+  const adUnitPath = props.adUnitPath ? props.adUnitPath : undefined;
+  const slotSize = props.slotSize ? props.slotSize : undefined;
   const placementTargeting = props.placementTargeting
     ? props.placementTargeting
-    : "";
+    : undefined;
   return (
     <div>
       <div className="i">{placementName}</div>
@@ -17,6 +20,9 @@ const FsAd = (props) => {
         placementName={placementName}
         targeting={placementTargeting}
         channel={channel}
+        slotId={slotId}
+        adUnitPath={adUnitPath}
+        slotSize={slotSize}
         onNewAdSlotsHook={(placementName) =>
           console.log("creating ad", placementName)
         }

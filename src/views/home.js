@@ -15,11 +15,15 @@ const Home = (props) => {
         placementName="MT_HP_300x250_middle"
         placementTargeting={{}}
         channel={channel}
+        slotId="testId"
       />
       <FsAd
-        placementName="MT_HP_300x600_300x250_middle"
+        placementName=""
         placementTargeting={{}}
         channel={channel}
+        slotId="passthrough-unit"
+        adUnitPath="3833/motortrend.primedia.com/buyersguide"
+        slotSize={[[300, 250]]}
       />
       <FsAd
         placementName="MT_HP_300x250_bottom"
