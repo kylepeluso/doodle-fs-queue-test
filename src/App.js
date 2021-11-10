@@ -4,6 +4,8 @@ import "./app.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./views/home";
 import MTG from "./views/MTG";
+import Contact from "./views/contact";
+
 const App = () => {
   return (
     <div className="app">
@@ -22,8 +24,9 @@ const App = () => {
               </li>
             </ul>
           </nav>
-          <Route path="/" exact component={Home} />
           <Route path="/MTG" component={MTG} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/" exact component={Home} />
         </main>
       </Router>
     </div>
