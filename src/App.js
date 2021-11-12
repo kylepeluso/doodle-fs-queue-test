@@ -1,10 +1,12 @@
 import React from "react";
 
 import "./app.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./views/home";
 import MTG from "./views/MTG";
 import Contact from "./views/contact";
+import Article1 from "./views/article1";
+import Article2 from "./views/article2";
 
 const App = () => {
   return (
@@ -14,19 +16,39 @@ const App = () => {
           <nav>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/MTG">MTG</a>
+                <Link to="/MTG">MTG</Link>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/article1">Article 1</Link>
+              </li>
+              <li>
+                <Link to="/article2">Article 2</Link>
               </li>
             </ul>
           </nav>
-          <Route path="/MTG" component={MTG} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/" exact component={Home} />
+          <Switch>
+            <Route path="/MTG">
+              <MTG />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/article1">
+              <Article1 />
+            </Route>
+            <Route path="/article2">
+              <Article2 />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
         </main>
       </Router>
     </div>

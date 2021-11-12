@@ -19,7 +19,7 @@ const Contact = (props) => {
         slotId="testId"
       />
       <FsAd
-        placementName="passthrough unit"
+        placementName="passthroughunit"
         placementTargeting={{}}
         channel={channel}
         slotId="passthrough-unit"
