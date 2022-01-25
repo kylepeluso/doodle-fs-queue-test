@@ -1,32 +1,32 @@
 import React, { Fragment } from "react";
 import FsAd from "../FsAd";
 
-const channel = "motortrend.primedia.com/homepage";
+const channel = "4735792/reuters.com/markets/deals/article";
 
 const Home = (props) => {
   return (
     <Fragment>
       <FsAd
-        placementName="MT_HP_300x250_top"
+        placementName="reuters_desktop_leaderboard_atf"
         placementTargeting={{ key: "value" }}
         channel={channel}
       />
       <FsAd
-        placementName="MT_HP_300x250_middle"
+        placementName="reuters_desktop_native_1"
         placementTargeting={{}}
         channel={channel}
         slotId="testId"
       />
       <FsAd
-        placementName=""
         placementTargeting={{}}
         channel={channel}
+        placementName="passthrough-unit"
         slotId="passthrough-unit"
-        adUnitPath="3833/motortrend.primedia.com/buyersguide"
+        adUnitPath={channel}
         slotSize={[[300, 250]]}
       />
       <FsAd
-        placementName="MT_HP_300x250_bottom"
+        placementName="reuters_desktop_native_2"
         placementTargeting={{}}
         channel={channel}
       />

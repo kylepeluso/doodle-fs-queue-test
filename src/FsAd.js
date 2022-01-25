@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 
 const FsAd = (props) => {
-  const publisher = "motortrend-com";
+  const publisher = "reuters-com";
   const placementName = props.placementName;
   const channel = props.channel;
   const slotId = props.slotId ? props.slotId : undefined;
@@ -12,6 +12,9 @@ const FsAd = (props) => {
   const placementTargeting = props.placementTargeting
     ? props.placementTargeting
     : undefined;
+  useEffect(() => {
+    console.log(placementName, "component mounted");
+  });
   return (
     <div>
       <div className="i">{placementName}</div>

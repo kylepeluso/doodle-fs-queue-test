@@ -1,13 +1,19 @@
 import React, { Fragment } from "react";
 import FsAd from "../FsAd";
+import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 
-const channel = "motortrend.primedia.com/buyersguide";
+const channel = "4735792/reuters.com/markets/deals/article";
+FreestarAdSlot.queueAdCalls(true);
+const onHandleClick = () => {
+  FreestarAdSlot.queueAdCalls(false);
+};
 
 const MTG = (props) => {
   return (
     <Fragment>
+      <button onClick={onHandleClick}>Trigger Ad Calls</button>
       <FsAd
-        placementName="MT_BG_300x250_top"
+        placementName="reuters_desktop_leaderboard_atf"
         placementTargeting={{ kyle: "test" }}
         channel={channel}
       />
@@ -24,7 +30,7 @@ const MTG = (props) => {
         lobortis laoreet velit, in dapibus turpis pharetra in.
       </p>
       <FsAd
-        placementName="MT_BG_300x250_extra"
+        placementName="reuters_desktop_right_rail_1"
         placementTargeting={{}}
         channel={channel}
       />
@@ -85,7 +91,7 @@ const MTG = (props) => {
         lobortis laoreet velit, in dapibus turpis pharetra in.
       </p>
       <FsAd
-        placementName="MT_BG_300x250_bottom"
+        placementName="reuters_desktop_right_rail_2"
         placementTargeting={{}}
         channel={channel}
       />
@@ -134,7 +140,7 @@ const MTG = (props) => {
         mattis tristique.
       </p>
       <FsAd
-        placementName="MT_BG_300x600_300x250_bottom_desktop"
+        placementName="reuters_desktop_right_rail_3"
         placementTargeting={{}}
         channel={channel}
       />
