@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 
 const FsAd = (props) => {
