@@ -3,7 +3,7 @@ import React from "react";
 import "./app.css";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Home from "./views/home";
-import MTG from "./views/MTG";
+import QueuePage from "./views/queue";
 import Contact from "./views/contact";
 import Article1 from "./views/article1";
 import Article2 from "./views/article2";
@@ -19,7 +19,7 @@ const App = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/MTG">MTG</Link>
+                <Link to="/queue-page">QueuePage</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
@@ -33,8 +33,8 @@ const App = () => {
             </ul>
           </nav>
           <Switch>
-            <Route path="/MTG">
-              <MTG />
+            <Route path="/queue-page">
+              <QueuePage />
             </Route>
             <Route path="/contact">
               <Contact />

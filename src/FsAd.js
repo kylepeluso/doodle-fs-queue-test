@@ -3,15 +3,10 @@ import React, { useEffect } from "react";
 import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 
 const FsAd = (props) => {
-  const publisher = "reuters-com";
+  const publisher = "doodle-com";
   const placementName = props.placementName;
-  const channel = props.channel;
   const slotId = props.slotId ? props.slotId : undefined;
-  const adUnitPath = props.adUnitPath ? props.adUnitPath : undefined;
-  const slotSize = props.slotSize ? props.slotSize : undefined;
-  const placementTargeting = props.placementTargeting
-    ? props.placementTargeting
-    : undefined;
+  const targeting = props.targeting ? props.targeting : undefined;
   useEffect(() => {
     console.log(placementName, "component mounted");
   });
@@ -21,11 +16,8 @@ const FsAd = (props) => {
       <FreestarAdSlot
         publisher={publisher}
         placementName={placementName}
-        targeting={placementTargeting}
-        channel={channel}
+        targeting={targeting}
         slotId={slotId}
-        adUnitPath={adUnitPath}
-        slotSize={slotSize}
         onNewAdSlotsHook={(placementName) =>
           console.log("creating ad", placementName)
         }
