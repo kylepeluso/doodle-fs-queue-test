@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import FsAd from "../FsAd";
 import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 
-FreestarAdSlot.queueAdCalls(true);
 const releaseAds = () => {
   FreestarAdSlot.queueAdCalls(false);
 };
 
 const QueuePage = (props) => {
+  FreestarAdSlot.queueAdCalls(true);
   return (
     <Fragment>
       <button onClick={releaseAds}>Trigger Ad Calls</button>
