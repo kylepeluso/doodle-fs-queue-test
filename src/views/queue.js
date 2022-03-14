@@ -5,14 +5,7 @@ import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 const QueuePage = (props) => {
   FreestarAdSlot.queueAdCalls(true);
   useEffect(() => {
-    //setTimeout(() => {
     FreestarAdSlot.queueAdCalls(false);
-    //}, 1);
-    console.log(
-      "KP: ",
-      document.querySelectorAll("#doodle_int_top").length +
-        document.querySelectorAll("#doodle_int_bottom").length
-    );
   }, []);
   return (
     <Fragment>
