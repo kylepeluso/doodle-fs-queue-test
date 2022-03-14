@@ -1,16 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import FsAd from "../FsAd";
 import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 
-const releaseAds = () => {
-  FreestarAdSlot.queueAdCalls(false);
-};
-
 const QueuePage = (props) => {
   FreestarAdSlot.queueAdCalls(true);
+  useEffect(() => {
+    //setTimeout(() => {
+    FreestarAdSlot.queueAdCalls(false);
+    //}, 1);
+    console.log(
+      "KP: ",
+      document.querySelectorAll("#doodle_int_top").length +
+        document.querySelectorAll("#doodle_int_bottom").length
+    );
+  }, []);
   return (
     <Fragment>
-      <button onClick={releaseAds}>Trigger Ad Calls</button>
       <FsAd placementName="doodle_int_top" targeting={{ kyle: "test" }} />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
