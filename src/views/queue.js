@@ -5,7 +5,7 @@ import FreestarAdSlot from "@freestar/pubfig-adslot-react-component";
 const QueuePage = (props) => {
   FreestarAdSlot.queueAdCalls(true);
   useEffect(() => {
-    FreestarAdSlot.queueAdCalls(false);
+    FreestarAdSlot.releaseQueuedAds();
   }, []);
   return (
     <Fragment>
